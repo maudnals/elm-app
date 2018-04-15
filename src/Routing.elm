@@ -5,8 +5,13 @@ import Models exposing (PlayerId, Route(..))
 import UrlParser exposing (..)
 
 
-matchers : 
-
+matchers : Parser (Route -> a) a
+matchers =
+    oneOf
+        [ map PlayersRoute top
+        , map PlayerRoute (s "players" </> string)
+        , map PlayersRoute (s "players")
+        ]
 -- oneOf takes a list of matchers and tries each item
 -- order is important as always in routing
 
