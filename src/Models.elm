@@ -1,8 +1,9 @@
-module Model exposing (..)
+module Models exposing (..)
 
 
 
-
+typa alias Model = 
+ {players: List Player}
 
 type Route = 
   PlayersRoute 
