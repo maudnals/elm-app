@@ -14,6 +14,7 @@ matchers =
         ]
 -- oneOf takes a list of matchers and tries each item
 -- order is important as always in routing
+-- like ocamel
 
 
 parseLocation : Location -> Route
